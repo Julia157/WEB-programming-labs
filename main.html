@@ -6,58 +6,24 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="favicon.ico" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   </head>
   <body>
     <header class="header_container">
       <h1 class="header_title">Доска задач</h1>
-      <button class="square orange"></button>
-      <button class="square aqua"></button>
-      <button class="square blue"></button>
-      <button class="square dark_green"></button>
-      <button class="square green"></button>
-      <button class="square red"></button>
-      <button class="square black"></button>
+      <div class="scroll_container">
+        <div class="square_containter">
+          <button class="square orange"></button>
+          <button class="square aqua"></button>
+          <button class="square blue"></button>
+          <button class="square dark_green"></button>
+          <button class="square green"></button>
+          <button class="square red"></button>
+          <button class="square black"></button>
+        </div>
+      </div>
     </header>
     <main class="main_block">
-      <section class="left_block">
-        <div class="task">
-          <div class="task_header">
-            <span>Text</span>
-            <div class="buttons_container">
-              <button class="cross">
-                <svg
-                  class="rotate45"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="8"
-                  height="8"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                </svg>
-              </button>
-              <button class="plus">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="8"
-                  height="8"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="task_body">
-            <div class="task_item">Description</div>
-            <div class="task_item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
-            </div>
-            <div class="task_item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="tasks_panel">
         <div id="panel">
           <div class="panel_item">
@@ -80,192 +46,219 @@
             <div class="name">Название доски</div>
           </div>
         </div>
-        <div id="tasks_container">
-          <div class="task">
-            <div class="task_header">
-              <span>Text</span>
-              <div class="buttons_container">
-                <button class="cross">
-                  <svg
-                    class="rotate45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-                <button class="plus">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
+        <div class="content">
+          <div id="tasks_container">
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
               </div>
             </div>
-            <div class="task_body">
-              <div class="task_item">Description</div>
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+              </div>
+            </div>
+            <div class="task">
+              <div class="task_header">
+                <span>Text</span>
+                <div class="buttons_container">
+                  <button class="cross">
+                    <svg
+                      class="rotate45"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                  <button class="plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="8"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="task_body">
+                <div class="task_item">Description</div>
+                <div class="task_item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam
+                </div>
+              </div>
             </div>
           </div>
-          <div class="task">
-            <div class="task_header">
-              <span>Text</span>
-              <div class="buttons_container">
-                <button class="cross">
-                  <svg
-                    class="rotate45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-                <button class="plus">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="task_body">
-              <div class="task_item">Description</div>
-              <div class="task_item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam
-              </div>
-              <div class="task_item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam
-              </div>
-            </div>
-          </div>
-          <div class="task">
-            <div class="task_header">
-              <span>Text</span>
-              <div class="buttons_container">
-                <button class="cross">
-                  <svg
-                    class="rotate45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-                <button class="plus">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="task_body">
-              <div class="task_item">Description</div>
-              <div class="task_item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam
-              </div>
-            </div>
-          </div>
-          <div class="task">
-            <div class="task_header">
-              <span>Text</span>
-              <div class="buttons_container">
-                <button class="cross">
-                  <svg
-                    class="rotate45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-                <button class="plus">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="task_body">
-              <div class="task_item">Description</div>
-              <div class="task_item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam
-              </div>
-            </div>
-          </div>
-          <div class="task">
-            <div class="task_header">
-              <span>Text</span>
-              <div class="buttons_container">
-                <button class="cross">
-                  <svg
-                    class="rotate45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-                <button class="plus">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="task_body">
-              <div class="task_item">Description</div>
-              <div class="task_item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam
-              </div>
-            </div>
-          </div>
-          <button class="plus_1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-            </svg>
-          </button>
         </div>
       </section>
     </main>
