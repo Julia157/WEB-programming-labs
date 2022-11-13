@@ -1,0 +1,53 @@
+body {
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #fcf0f1;
+}
+tr {
+  background-color: #fcf0f1;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  width: 100%;
+  border-spacing: 25px 10px;
+  background-color: #facfd2;
+}
+th,
+td {
+  padding: 10px;
+}
+tr:hover {
+  background-color: #ffabaf;
+}
+.container {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.button {
+  border-radius: 5px;
+  padding: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+.input_wrapper input {
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+#create_button {
+  background-color: #e7ce10;
+}
+#add_button {
+  background-color: #61da67;
+}
+#delete_button {
+  background-color: #ff0000;
+}

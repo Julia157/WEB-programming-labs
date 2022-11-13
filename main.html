@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Таблица</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+  </head>
+  <body>
+    <div id="table_wrapper"></div>
+    <!-- <table id="existing_table">
+      <tr id="tr11">
+        <th colspan="2">Table</th>
+      </tr>
+      <tr id="tr12">
+        <td id>1</td>
+        <td>lorem ipsum lore ips</td>
+      </tr>
+      <tr id="tr13">
+        <td>2</td>
+        <td>lorem ipsum lore ips</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>lorem ipsum lore ips</td>
+      </tr>
+    </table> -->
+    <div class="container">
+      <button id="create_button" class="button">Create</button>
+      <div class="input_wrapper">
+        <input id="add_input" type="text" />
+        <button id="add_button" class="button" disabled>Add</button>
+      </div>
+      <div class="input_wrapper">
+        <input id="delete_input" type="number" />
+        <button id="delete_button" class="button" disabled>Delete</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const createBtn = document.getElementById("create_button");
+  const addBtn = document.getElementById("add_button");
+  const deleteBtn = document.getElementById("delete_button");
+  var count = 0;
+
+  function getTable() {
+    return document.getElementById("existing_table");
+  }
+
+  createBtn.addEventListener("click", () => {
+    if (!getTable()) {
+      document.getElementById("table_wrapper").innerHTML +=
+        "<table id='existing_table'><tr><th colspan='2'>Table</th></tr></table>";
+      addBtn.removeAttribute("disabled");
+      deleteBtn.removeAttribute("disabled");
+    } else {
+      alert("TABLE ALREADY EXISTS");
+    }
+  });
+
+  addBtn.addEventListener("click", () => {
+    var table = getTable();
+    if (!table) {
+      alert("TABLE NOT EXISTS");
+      return -1;
+    }
+    var addInput = document.getElementById("add_input");
+    var addValue = addInput.value;
+
+    if (!addValue) {
+      alert("VALUE IS EMPTY");
+      return -1;
+    }
+
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    tr.id = "tr" + count;
+    td1.innerText = count;
+    td2.innerText = addValue;
+    addInput.value = "";
+    count++;
+
+    tr.append(td1, td2);
+    table.appendChild(tr);
+  });
+  deleteBtn.addEventListener("click", () => {
+    var table = getTable();
+    if (!table) {
+      alert("TABLE IS EMPTY");
+      return -1;
+    }
+    var deleteInput = document.getElementById("delete_input");
+    var deleteId = deleteInput.value;
+    if (!deleteId) {
+      alert("VALUE IS EMPTY");
+      return -1;
+    }
+    if (deleteId > count - 1 || deleteId < 0) {
+      alert("WRONG DELETE ID");
+      return -1;
+    }
+    document.getElementById("tr" + deleteId).remove();
+    deleteInput.value = "";
+  });
+</script>
