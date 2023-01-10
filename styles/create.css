@@ -1,0 +1,110 @@
+body {
+    background: #ddeefc;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 10px;
+    padding: 35px;
+    width: 50vw;
+    height: auto;
+    margin: 25vh auto;
+    position: relative;
+}
+
+#form_title {
+    margin: 0 0 15px 0;
+}
+
+/* circle start */
+
+.circle {
+    position: absolute;
+    border:1px solid #000;
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    box-shadow: 3px 10px 20px 0px rgb(35 100 210 / 30%);
+}
+  
+.circle.back:after {
+    content: '';
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 8px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+  
+/* circle end */
+
+#errors_list {
+    margin: 0 0 15px 0;
+    width: 80%;
+}
+
+#errors_list li {
+    color: #b31a1a;
+    font-weight: 500;
+}
+
+#create_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background: #2364d2;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 55px;
+}
+
+.create_input {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.1s ease-in-out;
+    font-size: 18px;
+    padding: 5px 15px;
+    background: none;
+    color: #1a3b5d;
+    box-sizing: border-box;
+}
+
+.create_input::-webkit-input-placeholder {
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+}
+
+.not_found {
+    color: red;
+    margin: 0;
+}
